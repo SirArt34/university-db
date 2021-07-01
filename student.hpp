@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
+#include <vector>
 
-
+void DisplayMenu();
 
 class Student{
 
@@ -15,14 +16,11 @@ class Student{
 
     public : 
     
-    Student(const std::string & name, const std::string& surname, const std::string address, unsigned index, const std::string & pesel, const std::string gender) : name_(name), surname_(surname), address_(address), indexNumber_(index), pesel_(pesel), gender_(gender) {}
-    // Student(const std::string& name, std::string& surName,std::string& address,unsigned indexNumber,std::string& pesel, std::string& gender)
-    // : name_(name)
-    // , surName_(surName)
-    // , address_(address)
-    // , indexNumber_(indexNumber)
-    // , pesel_(pesel)
-    // , gender_(gender) {} 
+    Student(const std::string & name, const std::string& surname, const std::string address, unsigned index, const std::string & pesel, const std::string gender) ;
 
     std::string getName() const {return name_;}
 };
+
+extern std::vector<Student> vectorOfStudent;
+
+void displayBase(std::vector<Student> vec);
