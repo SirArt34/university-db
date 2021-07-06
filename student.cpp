@@ -135,4 +135,34 @@ void SortByPesel(std::vector<Student> & a )
     std::sort(a.begin(), a.end(), [] (auto &st1, auto &st2) {
     return st1.getPesel() < st2.getPesel();});
 }
+void SortBySurName(std::vector<Student> & a )
+{
+    std::sort(a.begin(), a.end(), [] (auto &st1, auto &st2) {
+    return st1.getSurname() < st2.getSurname();});
+}
 
+void EraseByIndeNumber(std::vector<Student> & data)
+{
+    unsigned temp ;
+    std::cout<<"Podaj index ktory ma zostac usuniety : \n";
+    std::cin>>temp;
+    
+auto new_end = std::remove_if(data.begin(), data.end(),
+                              [&temp](const Student& st)
+                              { return st.getIndex() == temp; });
+
+data.erase(new_end, data.end());    // for(auto & val : data)
+    // {
+    //     if (temp == val.getIndex())
+    //     {
+    //         data.erase(std::remove();
+    //     }       
+    // }
+    // for(auto it = data.begin(); it != data.end(); ++it)
+    // {
+    //     if (temp == it.getIndex())
+    //     {
+    //         std::cout<<*it;
+    //     }
+    // }
+}

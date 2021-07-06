@@ -44,3 +44,5 @@ void addStudent();
 void SearchByName(std::vector<Student>& data);
 void SearchByPesel(std::vector<Student>& data);
 void SortByPesel(std::vector<Student> & a );
+void SortBySurName(std::vector<Student> & a );
+void EraseByIndeNumber(std::vector<Student> & data);
