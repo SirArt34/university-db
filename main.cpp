@@ -12,7 +12,7 @@ vectorOfStudent.push_back(Adam);
 vectorOfStudent.push_back(Ewa);
 vectorOfStudent.push_back(Ewa2);
 
-// addStudent();
+//addStudent();
 // displayDB(vectorOfStudent);
 // SearchByName(vectorOfStudent);
 // SearchByPesel(vectorOfStudent);
@@ -23,7 +23,8 @@ vectorOfStudent.push_back(Ewa2);
 // SortBySurName(vectorOfStudent);
 // std::cout<<"\n";
 
-displayDB(vectorOfStudent);
-EraseByIndeNumber(vectorOfStudent);
-displayDB(vectorOfStudent);
+// displayDB(vectorOfStudent);
+// EraseByIndeNumber(vectorOfStudent);
+// displayDB(vectorOfStudent);
+SaveToFile(vectorOfStudent);
 }

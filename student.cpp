@@ -4,6 +4,8 @@
 #include <iostream>
 #include <list>
 #include <algorithm>
+#include <iostream>
+#include <fstream>
 
 Student::Student()
 {
@@ -29,6 +31,7 @@ void DisplayMenu()
 }
 
 std::vector<Student> vectorOfStudent;
+
 
 void displayDB(std::vector<Student>& data)
 {
@@ -67,11 +70,11 @@ void addStudent()
     st.setAddress(temp);
     std::cout<<"Please provide index number ";
     std::cin>>temp2;
-    st.setIndex(temp2);
-    std::cout<<"Please provide pesel ";
-    std::cin>>temp;
-    st.setPesel(temp);
-    vectorOfStudent.push_back(st);
+     st.setIndex(temp2);
+     std::cout<<"Please provide pesel ";
+     std::cin>>temp;
+     st.setPesel(temp);
+    // vectorOfStudent.push_back(st);
 }
 
 void SearchByName(std::vector<Student>& data)
@@ -151,18 +154,27 @@ auto new_end = std::remove_if(data.begin(), data.end(),
                               [&temp](const Student& st)
                               { return st.getIndex() == temp; });
 
-data.erase(new_end, data.end());    // for(auto & val : data)
-    // {
-    //     if (temp == val.getIndex())
-    //     {
-    //         data.erase(std::remove();
-    //     }       
-    // }
-    // for(auto it = data.begin(); it != data.end(); ++it)
-    // {
-    //     if (temp == it.getIndex())
-    //     {
-    //         std::cout<<*it;
-    //     }
-    // }
+data.erase(new_end, data.end());    
+ 
+}
+
+void SaveToFile(std::vector<Student>& data)
+{
+  
+  // Create and open a text file
+  std::ofstream MyFile("filename.txt");
+  // Write to the file
+ MyFile <<"Name\tSurname\tAddress\tIndex\tPesel\tGender\n";
+   for(auto & val : data)
+    {
+        MyFile << val.getName()<<" ";
+        MyFile << val.getSurname()<<" ";
+        MyFile << val.getAddress()<<" ";
+        MyFile << val.getIndex()<<" ";
+        MyFile << val.getPesel()<<" ";
+        MyFile << val.getGender()<<"\n";
+    }
+    std::cout<<"File saved successfully!\n";
+  MyFile.close();
+
 }
