@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/UNIV.dir/main.cpp.o CMakeFiles/UNIV.dir/student.cpp.o  -o UNIV  libUNIV-lib.a 

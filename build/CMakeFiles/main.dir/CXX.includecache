@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rafal/Desktop/University-db/university-db/main.cpp
+student.hpp
+/home/rafal/Desktop/University-db/university-db/student.hpp
+iostream
+-
+
+/home/rafal/Desktop/University-db/university-db/student.hpp
+string
+-
+cstdlib
+-
+vector
+-
+iostream
+-
+fstream
+-
+

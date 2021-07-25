@@ -1,0 +1,4 @@
+/home/rafal/Desktop/University-db/university-db/build/CMakeFiles/rebuild_cache.dir
+/home/rafal/Desktop/University-db/university-db/build/CMakeFiles/edit_cache.dir
+/home/rafal/Desktop/University-db/university-db/build/CMakeFiles/UNIV.dir
+/home/rafal/Desktop/University-db/university-db/build/CMakeFiles/UNIV-lib.dir
